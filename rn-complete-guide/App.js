@@ -4,9 +4,9 @@ import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 
 export default function App() {
   return (
-    <View style={{borderBottomColor: 'black', borderBottomWidth: 1, padding: 30}}>
-      <TextInput />
-      <Button title="Create Goal" />
+    <View>
+      <TextInput placeholder="Create Goal" style={{borderBottomColor: 'black', borderBottomWidth: 1, padding: 30}} />
+      <Button title="ADD" />
     </View>
   );
 }
