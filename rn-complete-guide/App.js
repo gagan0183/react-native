@@ -19,7 +19,9 @@ export default function App() {
         <TextInput placeholder="Create Goal" style={styles.textInput} onChangeText={textEntered} />
         <Button title="ADD" onPress={add} />
       </View>
-      <View />
+      <View>
+        {goals.map(goal => <Text key={goal}>{goal}</Text>)}
+      </View>
     </View>
   );
 }
