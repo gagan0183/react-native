@@ -20,7 +20,7 @@ export default function App() {
         <Button title="ADD" onPress={add} />
       </View>
       <View>
-        {goals.map(goal => <Text key={goal}>{goal}</Text>)}
+        {goals.map(goal => <View key={goal} style={styles.listItem}><Text>{goal}</Text></View>)}
       </View>
     </View>
   );
@@ -40,5 +40,12 @@ const styles = StyleSheet.create({
     borderBottomColor: 'black', 
     borderBottomWidth: 1, 
     padding: 10 
+  },
+  listItem: {
+    padding: 10,
+    marginVertical: 10,
+    backgroundColor: '#ccc',
+    borderColor: 'black',
+    borderWidth: 1
   }
 });
