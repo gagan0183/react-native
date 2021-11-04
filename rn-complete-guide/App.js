@@ -10,9 +10,10 @@ export default function App() {
     setGoals(currentGoals => [...currentGoals, { id: Math.random().toString(), value: goal }]);
   }
 
-  const deleteItem = (item) => {
-    const newGoals = goals.filter(goal => goal.id !== item.id);
-    setGoals(newGoals);
+  const deleteItem = (goalId) => {
+    setGoals(currentGoals => {
+      return currentGoals.filter((goal) => goal.id !== goalId);
+    });
   }
 
   return (
